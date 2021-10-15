@@ -1,4 +1,4 @@
-FROM python:3.9-alpine3.13 
+FROM python:3.9-alpine3.13
 LABEL maintainer="xavierfrancisco353@gmail.com" 
 
 ENV PYTHONUNBUFFERED 1
@@ -13,6 +13,7 @@ RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     apk add --update --no-cache postgresql-client && \
     apk add --update --no-cache --virtual .tmp-deps \
+        gcc libc-dev linux-headers jpeg-dev zlib zlib-dev \
         build-base postgresql-dev musl-dev && \
     /py/bin/pip install -r /requirements.txt && \
     apk del .tmp-deps && \
