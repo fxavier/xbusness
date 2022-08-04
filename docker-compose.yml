@@ -16,7 +16,7 @@ services:
       - SECRET_KEY=devsecretkey
       - DEBUG=1
       - DB_HOST=db 
-      - DB_Name=devdb
+      - DB_Name=easyshopdb
       - DB_USER=devuser
       - DB_PASS=devpassword
 
@@ -27,7 +27,7 @@ services:
     image: postgres:13-alpine
     container_name: xbusnessdb
     environment:
-      - POSTGRES_DB=devdb
+      - POSTGRES_DB=easyshopdb
       - POSTGRES_USER=devuser
       - POSTGRES_PASSWORD=devpassword
       

@@ -1,7 +1,7 @@
 from django.contrib import admin
 from core.models.customer import Customer
 from core.models.person import Person, Phone, Bank
-from core.models.product import Product, Category, Brand, Coupon, Unity
+from core.models.product import Product, Category, Brand, Unity, ImageUpload, ProductImage
 from core.models.provider import Provider
 from core.models.transporter import Transporter, Vehicle
 
@@ -13,11 +13,12 @@ classes = [
     Product,
     Category,
     Brand,
-    Coupon,
     Unity,
     Provider,
     Transporter,
-    Vehicle
+    Vehicle,
+    ImageUpload,
+    ProductImage
 ]
 
 for model in classes:
